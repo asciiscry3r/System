@@ -1,0 +1,15 @@
+[Unit]
+Description=Accounts Service
+After=nss-user-lookup.target
+Wants=nss-user-lookup.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/randomsound
+Restart=on-failure
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+
+[Install]
+WantedBy=graphical.target

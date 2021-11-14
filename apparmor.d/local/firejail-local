@@ -1,0 +1,5 @@
+deny /proc/mounts r,
+deny /proc/mountinfo r,
+
+deny /proc/@{PID}/mounts r,
+deny /proc/@{PID}/mountinfo r,

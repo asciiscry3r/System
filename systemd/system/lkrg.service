@@ -1,0 +1,26 @@
+##
+# Systemd service for LKRG (main branch)
+#
+# Author:
+#  - Adam 'pi3' Zabrocki (http://pi3.com.pl)
+##
+
+[Unit]
+Description=Linux Kernel Runtime Guard
+DefaultDependencies=no
+After=systemd-modules-load.service
+Before=systemd-sysctl.service
+Before=sysinit.target shutdown.target
+Conflicts=shutdown.target
+ConditionKernelCommandLine=!nolkrg
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/modprobe -v p_lkrg
+ExecStartPost=/sbin/sysctl -p /etc/sysctl.d/lkrg.conf
+ExecStop=/sbin/modprobe -v -r p_lkrg
+RemainAfterExit=yes
+
+[Install]
+WantedBy=sysinit.target
+
