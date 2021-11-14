@@ -1,0 +1,87 @@
+2021-06-06 14:59:24 INFO ========
+2021-06-06 14:59:24 INFO Starting py3status version 3.36 python 3.9.5
+2021-06-06 14:59:24 INFO window manager: i3
+2021-06-06 14:59:24 INFO py3status started with config {'dbus_notify': False, 'i3status_config_path': PosixPath('i3status.conf'), 'debug': True, 'gevent': False, 'include_paths': [], 'log_file': PosixPath('test.log'), 'standalone': False, 'cache_timeout': 60, 'i3status_path': PosixPath('/usr/bin/i3status'), 'wm': {'msg': 'i3-msg', 'nag': 'i3-nagbar'}, 'python_version': '3.9.5', 'version': '3.36', 'wm_name': 'i3', 'minimum_interval': 0.1, 'click_events': True}
+2021-06-06 14:59:24 INFO config file: i3status.conf
+2021-06-06 14:59:24 INFO adding module ipv6
+2021-06-06 14:59:24 INFO adding module cpu_usage
+2021-06-06 14:59:24 INFO adding module disk /
+2021-06-06 14:59:24 INFO adding module run_watch DHCP
+2021-06-06 14:59:24 INFO adding module run_watch VPNC
+2021-06-06 14:59:24 INFO adding module path_exists VPN
+2021-06-06 14:59:24 INFO adding module wireless _first_
+2021-06-06 14:59:24 INFO adding module ethernet _first_
+2021-06-06 14:59:24 INFO adding module battery all
+2021-06-06 14:59:24 INFO adding module memory
+2021-06-06 14:59:24 INFO adding module tztime local
+2021-06-06 14:59:24 INFO i3status spawned using config file /tmp/py3status_7fkbbsy3
+2021-06-06 14:59:24 INFO i3status thread started with config {'general': {'color_bad': '#BB4040', 'color_degraded': '#D8A000', 'color_good': '#00D800', 'color_separator': '#333333', 'colors': True, 'interval': 5, 'output_format': 'i3bar'}, 'py3status': {}, 'order': ['mpris', 'ipv6', 'arch_updates', 'cpu_usage', 'disk /', 'systemd ids', 'systemd usbguard', 'run_watch DHCP', 'run_watch VPNC', 'path_exists VPN', 'wireless _first_', 'ethernet _first_', 'battery all', 'memory', 'tztime local'], 'mpris': {}, 'ipv6': {}, 'arch_updates': {'format': 'UPD: {pacman}/{aur}', 'include_aur': True, 'hide_if_zero': True}, 'cpu_usage': {'format': ' cpu  %usage '}, 'disk /': {'format': ' ⛁ %avail '}, 'systemd ids': {'hide_extension': True, 'unit': 'suricata.service'}, 'systemd usbguard': {'hide_extension': True, 'unit': 'usbguard.service'}, 'run_watch DHCP': {'pidfile': '/var/run/dhclient*.pid'}, 'run_watch VPNC': {'pidfile': '/var/run/vpnc/pid'}, 'path_exists VPN': {'path': '/proc/sys/net/ipv4/conf/tun0'}, 'wireless _first_': {'format_up': 'W: %quality at %essid, %bitrate', 'format_down': 'W: down'}, 'ethernet _first_': {'format_up': ' lan: %speed ', 'format_down': ' no lan '}, 'battery all': {'format': ' %status %percentage', 'format_down': 'No battery', 'last_full_capacity': True, 'integer_battery_capacity': True, 'status_chr': '⚡', 'status_bat': '\uf213', 'status_unk': '', 'status_full': '☻', 'low_threshold': 15, 'threshold_type': 'time'}, 'memory': {'format': '%used | %available', 'threshold_degraded': '1G', 'format_degraded': 'MEMORY < %available'}, 'tztime local': {'format': ' %d.%m. %H:%M '}, 'on_click': {'systemd ids': {'1': 'exec sudo systemctl start suricata', '3': 'exec sudo systemctl stop suricata'}, 'systemd usbguard': {'1': 'exec sudo systemctl start usbguard', '3': 'exec sudo systemctl stop usbguard'}}, 'i3s_modules': ['ipv6', 'cpu_usage', 'disk /', 'run_watch DHCP', 'run_watch VPNC', 'path_exists VPN', 'wireless _first_', 'ethernet _first_', 'battery all', 'memory', 'tztime local'], 'py3_modules': ['mpris', 'arch_updates', 'systemd ids', 'systemd usbguard'], '.module_groups': {}}
+2021-06-06 14:59:24 INFO events thread started
+2021-06-06 14:59:24 INFO Unix domain socket at /tmp/py3status_uds.8699
+2021-06-06 14:59:24 INFO waiting for a connection
+2021-06-06 14:59:24 INFO commands thread started
+2021-06-06 14:59:24 INFO modules include paths: []
+2021-06-06 14:59:24 INFO user_modules={}
+2021-06-06 14:59:24 INFO loading module "mpris" from py3status.modules.mpris
+2021-06-06 14:59:24 INFO module "mpris" click_events=new has_kill=new methods=['mpris']
+2021-06-06 14:59:24 INFO loading module "arch_updates" from py3status.modules.arch_updates
+2021-06-06 14:59:24 INFO DEPRECATION WARNING: arch_updates `include_aur` obsolete
+2021-06-06 14:59:24 INFO module "arch_updates" click_events=False has_kill=False methods=['arch_updates']
+2021-06-06 14:59:24 INFO loading module "systemd ids" from py3status.modules.systemd
+2021-06-06 14:59:24 INFO module "systemd ids" click_events=False has_kill=False methods=['systemd']
+2021-06-06 14:59:24 INFO loading module "systemd usbguard" from py3status.modules.systemd
+2021-06-06 14:59:24 INFO module "systemd usbguard" click_events=False has_kill=False methods=['systemd']
+2021-06-06 14:59:24 INFO starting module arch_updates
+2021-06-06 14:59:24 INFO starting module systemd ids
+2021-06-06 14:59:24 INFO starting module mpris
+2021-06-06 14:59:24 INFO method mpris returned {'color': '#BB4040', 'composite': [{'full_text': 'No Track ', 'instance': ' 0', 'name': 'mpris', 'separator': False, 'separator_block_width': 0, 'color': '#BB4040'}, {'color': '#00D800', 'full_text': '◃ ', 'index': 'previous', 'instance': ' previous', 'name': 'mpris', 'separator': False, 'separator_block_width': 0}, {'color': '#00D800', 'full_text': '▷ ', 'index': 'toggle', 'instance': ' toggle', 'name': 'mpris', 'separator': False, 'separator_block_width': 0}, {'color': '#00D800', 'full_text': '▹', 'index': 'next', 'instance': ' next', 'name': 'mpris'}], 'instance': '', 'name': 'mpris'} 
+2021-06-06 14:59:24 INFO starting module systemd usbguard
+2021-06-06 14:59:24 INFO method systemd returned {'color': '#D8A000', 'composite': [{'full_text': 'suricata: not-found', 'instance': 'ids 0', 'name': 'systemd', 'color': '#D8A000'}], 'instance': 'ids', 'name': 'systemd'} 
+2021-06-06 14:59:24 INFO method systemd returned {'color': '#BB4040', 'composite': [{'full_text': 'usbguard: inactive', 'instance': 'usbguard 0', 'name': 'systemd', 'color': '#BB4040'}], 'instance': 'usbguard', 'name': 'systemd'} 
+2021-06-06 14:59:25 INFO method arch_updates returned {'full_text': '', 'instance': '', 'name': 'arch_updates'} 
+2021-06-06 14:59:29 INFO method systemd returned {'color': '#BB4040', 'composite': [{'full_text': 'usbguard: inactive', 'instance': 'usbguard 0', 'name': 'systemd', 'color': '#BB4040'}], 'instance': 'usbguard', 'name': 'systemd'} 
+2021-06-06 14:59:29 INFO method systemd returned {'color': '#D8A000', 'composite': [{'full_text': 'suricata: not-found', 'instance': 'ids 0', 'name': 'systemd', 'color': '#D8A000'}], 'instance': 'ids', 'name': 'systemd'} 
+2021-06-06 14:59:31 INFO lock set, exiting
+2021-06-06 15:00:46 INFO ========
+2021-06-06 15:00:46 INFO Starting py3status version 3.36 python 3.9.5
+2021-06-06 15:00:46 INFO window manager: i3
+2021-06-06 15:00:46 INFO py3status started with config {'dbus_notify': False, 'i3status_config_path': PosixPath('i3status.conf'), 'debug': True, 'gevent': False, 'include_paths': [], 'log_file': PosixPath('test.log'), 'standalone': False, 'cache_timeout': 60, 'i3status_path': PosixPath('/usr/bin/i3status'), 'wm': {'msg': 'i3-msg', 'nag': 'i3-nagbar'}, 'python_version': '3.9.5', 'version': '3.36', 'wm_name': 'i3', 'minimum_interval': 0.1, 'click_events': True}
+2021-06-06 15:00:46 INFO config file: i3status.conf
+2021-06-06 15:00:46 INFO adding module ipv6
+2021-06-06 15:00:46 INFO adding module cpu_usage
+2021-06-06 15:00:46 INFO adding module disk /
+2021-06-06 15:00:46 INFO adding module run_watch DHCP
+2021-06-06 15:00:46 INFO adding module run_watch VPNC
+2021-06-06 15:00:46 INFO adding module path_exists VPN
+2021-06-06 15:00:46 INFO adding module wireless _first_
+2021-06-06 15:00:46 INFO adding module ethernet _first_
+2021-06-06 15:00:46 INFO adding module battery all
+2021-06-06 15:00:46 INFO adding module memory
+2021-06-06 15:00:46 INFO adding module tztime local
+2021-06-06 15:00:46 INFO i3status spawned using config file /tmp/py3status_phw5_1zw
+2021-06-06 15:00:46 INFO i3status thread started with config {'general': {'color_bad': '#BB4040', 'color_degraded': '#D8A000', 'color_good': '#00D800', 'color_separator': '#333333', 'colors': True, 'interval': 5, 'output_format': 'i3bar'}, 'py3status': {}, 'order': ['mpris', 'ipv6', 'arch_updates', 'cpu_usage', 'disk /', 'systemd ids', 'systemd usbguard', 'run_watch DHCP', 'run_watch VPNC', 'path_exists VPN', 'wireless _first_', 'ethernet _first_', 'battery all', 'memory', 'tztime local'], 'mpris': {}, 'ipv6': {}, 'arch_updates': {'format': 'UPD: {pacman}/{aur}', 'hide_if_zero': False}, 'cpu_usage': {'format': ' cpu  %usage '}, 'disk /': {'format': ' ⛁ %avail '}, 'systemd ids': {'hide_extension': True, 'unit': 'suricata.service'}, 'systemd usbguard': {'hide_extension': True, 'unit': 'usbguard.service'}, 'run_watch DHCP': {'pidfile': '/var/run/dhclient*.pid'}, 'run_watch VPNC': {'pidfile': '/var/run/vpnc/pid'}, 'path_exists VPN': {'path': '/proc/sys/net/ipv4/conf/tun0'}, 'wireless _first_': {'format_up': 'W: %quality at %essid, %bitrate', 'format_down': 'W: down'}, 'ethernet _first_': {'format_up': ' lan: %speed ', 'format_down': ' no lan '}, 'battery all': {'format': ' %status %percentage', 'format_down': 'No battery', 'last_full_capacity': True, 'integer_battery_capacity': True, 'status_chr': '⚡', 'status_bat': '\uf213', 'status_unk': '', 'status_full': '☻', 'low_threshold': 15, 'threshold_type': 'time'}, 'memory': {'format': '%used | %available', 'threshold_degraded': '1G', 'format_degraded': 'MEMORY < %available'}, 'tztime local': {'format': ' %d.%m. %H:%M '}, 'on_click': {'systemd ids': {'1': 'exec sudo systemctl start suricata', '3': 'exec sudo systemctl stop suricata'}, 'systemd usbguard': {'1': 'exec sudo systemctl start usbguard', '3': 'exec sudo systemctl stop usbguard'}}, 'i3s_modules': ['ipv6', 'cpu_usage', 'disk /', 'run_watch DHCP', 'run_watch VPNC', 'path_exists VPN', 'wireless _first_', 'ethernet _first_', 'battery all', 'memory', 'tztime local'], 'py3_modules': ['mpris', 'arch_updates', 'systemd ids', 'systemd usbguard'], '.module_groups': {}}
+2021-06-06 15:00:46 INFO events thread started
+2021-06-06 15:00:46 INFO Unix domain socket at /tmp/py3status_uds.8857
+2021-06-06 15:00:46 INFO commands thread started
+2021-06-06 15:00:46 INFO modules include paths: []
+2021-06-06 15:00:46 INFO waiting for a connection
+2021-06-06 15:00:46 INFO user_modules={}
+2021-06-06 15:00:46 INFO loading module "mpris" from py3status.modules.mpris
+2021-06-06 15:00:46 INFO module "mpris" click_events=new has_kill=new methods=['mpris']
+2021-06-06 15:00:46 INFO loading module "arch_updates" from py3status.modules.arch_updates
+2021-06-06 15:00:46 INFO module "arch_updates" click_events=False has_kill=False methods=['arch_updates']
+2021-06-06 15:00:46 INFO loading module "systemd ids" from py3status.modules.systemd
+2021-06-06 15:00:46 INFO module "systemd ids" click_events=False has_kill=False methods=['systemd']
+2021-06-06 15:00:46 INFO loading module "systemd usbguard" from py3status.modules.systemd
+2021-06-06 15:00:46 INFO module "systemd usbguard" click_events=False has_kill=False methods=['systemd']
+2021-06-06 15:00:46 INFO starting module arch_updates
+2021-06-06 15:00:46 INFO starting module mpris
+2021-06-06 15:00:46 INFO method mpris returned {'color': '#BB4040', 'composite': [{'full_text': 'No Track ', 'instance': ' 0', 'name': 'mpris', 'separator': False, 'separator_block_width': 0, 'color': '#BB4040'}, {'color': '#00D800', 'full_text': '◃ ', 'index': 'previous', 'instance': ' previous', 'name': 'mpris', 'separator': False, 'separator_block_width': 0}, {'color': '#00D800', 'full_text': '▷ ', 'index': 'toggle', 'instance': ' toggle', 'name': 'mpris', 'separator': False, 'separator_block_width': 0}, {'color': '#00D800', 'full_text': '▹', 'index': 'next', 'instance': ' next', 'name': 'mpris'}], 'instance': '', 'name': 'mpris'} 
+2021-06-06 15:00:46 INFO starting module systemd usbguard
+2021-06-06 15:00:46 INFO starting module systemd ids
+2021-06-06 15:00:46 INFO method systemd returned {'color': '#BB4040', 'composite': [{'full_text': 'usbguard: inactive', 'instance': 'usbguard 0', 'name': 'systemd', 'color': '#BB4040'}], 'instance': 'usbguard', 'name': 'systemd'} 
+2021-06-06 15:00:46 INFO method systemd returned {'color': '#D8A000', 'composite': [{'full_text': 'suricata: not-found', 'instance': 'ids 0', 'name': 'systemd', 'color': '#D8A000'}], 'instance': 'ids', 'name': 'systemd'} 
+2021-06-06 15:00:47 INFO method arch_updates returned {'composite': [{'full_text': 'UPD: 0/0', 'instance': ' 0', 'name': 'arch_updates'}], 'instance': '', 'name': 'arch_updates'} 
+2021-06-06 15:00:51 INFO method systemd returned {'color': '#BB4040', 'composite': [{'full_text': 'usbguard: inactive', 'instance': 'usbguard 0', 'name': 'systemd', 'color': '#BB4040'}], 'instance': 'usbguard', 'name': 'systemd'} 
+2021-06-06 15:00:51 INFO method systemd returned {'color': '#D8A000', 'composite': [{'full_text': 'suricata: not-found', 'instance': 'ids 0', 'name': 'systemd', 'color': '#D8A000'}], 'instance': 'ids', 'name': 'systemd'} 
+2021-06-06 15:00:52 INFO lock set, exiting
