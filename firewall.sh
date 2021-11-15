@@ -12,7 +12,7 @@ iptables -P INPUT DROP
 
 iptables -A LOG_AND_DROP -j LOG --log-prefix "iptables deny: " --log-level 7
 iptables -A LOG_AND_DROP -j DROP
-iptables -A LOG_AND_REJECT -j LOG --log-prefix "iptables deny: " --log-level 7
+iptables -A LOG_AND_REJECT -j LOG --log-prefix "iptables reject: " --log-level 7
 iptables -A LOG_AND_REJECT -j REJECT --reject-with icmp-proto-unreachable
 
 iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
@@ -44,9 +44,9 @@ ip6tables -P FORWARD DROP
 ip6tables -P OUTPUT ACCEPT
 ip6tables -P INPUT DROP
 
-ip6tables -A LOG_AND_DROP -j LOG --log-prefix "iptables deny: " --log-level 7
+ip6tables -A LOG_AND_DROP -j LOG --log-prefix "ip6tables deny: " --log-level 7
 ip6tables -A LOG_AND_DROP -j DROP
-ip6tables -A LOG_AND_REJECT -j LOG --log-prefix "iptables deny: " --log-level 7
+ip6tables -A LOG_AND_REJECT -j LOG --log-prefix "ip6tables reject: " --log-level 7
 ip6tables -A LOG_AND_REJECT -j REJECT --reject-with icmp6-adm-prohibited
 
 ip6tables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
