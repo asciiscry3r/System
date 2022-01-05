@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+firejail --noprofile --noroot --apparmor --nonewprivs --name=slack slack
+
