@@ -36,16 +36,17 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 ## sound-section ##############################################################
 ###############################################################################
 
-exec --no-startup-id start-pulseaudio-x11
+# exec --no-startup-id pulseaudio
 exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
 
 ###############################################################################
 
 # Start Applications snadbox --x11
-bindsym $mod+F2 exec google-chrome-stable #/usr/local/bin/google-chrome-libjemalloc.sh
-bindsym $mod+Shift+F2 exec chromium
-bindsym $mod+Shift+p exec /usr/local/bin/steam-libjemalloc.sh
+# /usr/local/bin/google-chrome-libjemalloc.sh
+bindsym $mod+F2 exec google-chrome-stable --disable-video-capture-use-gpu-memory-buffer --enable-chrome-browser-cloud-management --enable-crash-reporter --enable-extension-activity-logging --enable-logging -enable-protected-video-buffers --enable-reporting --no-self-delete --use-vulkan --disable-file-system
+bindsym $mod+Shift+F2 exec firefox
+bindsym $mod+Shift+p exec steam
 bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F4 exec urxvt -e 'htop'
 # bindsym $mod+Shift+F3 exec pkexec pcmanfm
@@ -56,7 +57,7 @@ bindsym $mod+Ctrl+t exec --no-startup-id picom --experimental-backends -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id teiler
 # bindsym $mod+Print exec --no-startup-id scrot
-bindsym $mod+Ctrl+k exec urxvt -e 'xkill'
+bindsym $mod+Ctrl+k exec --no-startup-id xkill
 
 # focus_follows_mouse no
 
@@ -199,6 +200,8 @@ for_window [class="Skype"] floating enable
 for_window [class="Timeset-gui"] floating enable
 for_window [class="(?i)virtualbox"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
+for_window [class="Nut-monitor"] floating enable
+for_window [class="Bitwarden"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -262,19 +265,17 @@ exec --no-startup-id nitrogen --restore; sleep 1; picom --experimental-backends 
 exec --no-startup-id nm-applet
 exec --no-startup-id opensnitch-ui
 exec --no-startup-id xfce4-power-manager
-# exec --no-startup-id /usr/local/bin/telegram-desktop-libjemalloc.sh
-exec --no-startup-id telegram-desktop --
-exec --no-startup-id blueman-applet
-exec --no-startup-id redshift -l 50.4091727:30.5105691
+exec --no-startup-id telegram-desktop
+exec --no-startup-id redshift -t 6500:4500 -l 50.4091727:30.5105691
 exec --no-startup-id unclutter
 exec --no-startup-id udev-notify
 exec --no-startup-id gxkb
 exec_always --no-startup-id autotiling
-exec --no-startup-id xsuspender
-exec --no-startup-id hushboard
+# exec --no-startup-id xsuspender
+exec --no-startup-id python3 /opt/thefanclub/overgrive/overgrive
+# exec --no-startup-id hushboard
 exec_always --no-startup-id /home/max/.config/i3/autostart
-# exec_always --no-startup-id ff-theme-util
-# exec_always --no-startup-id fix_xcurso #
+
 # background $term_background
 # Same logic applied to everything else.
 set_from_resource $term_background background
@@ -299,17 +300,17 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
-	#status_command py3status -c ~/.config/i3/i3status.conf
+	# status_command py3status -c ~/.config/i3/i3status.conf
 	status_command i3status
-	position top
+	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	tray_output eDP-1
-#	tray_output primary
+#	 tray_output primary
 
 	bindsym button4 nop
 	bindsym button5 nop
-#   font xft:URWGothic-Book 11
+#        font xft:URWGothic-Book 11
 	strip_workspace_numbers yes
 
     colors {
