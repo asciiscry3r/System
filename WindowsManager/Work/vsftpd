@@ -1,0 +1,64 @@
+# No anonymous login
+anonymous_enable=NO
+# Let local users login
+# If you connect from the internet with local users, you should enable TLS/SSL/FTPS
+local_enable=YES
+# Write permissions 
+virtual_use_local_privs=YES
+write_enable=YES
+
+# Set the name of the PAM service vsftpd will use
+pam_service_name=vsftpd.virtual
+
+# Activates virtual users
+guest_enable=YES
+
+# Automatically generate a home directory for each virtual user, based on a template.
+# For example, if the home directory of the real user specified via guest_username is
+# /home/virtual/$USER, and user_sub_token is set to $USER, then when virtual user vivek
+# logs in, he will end up (usually chroot()'ed) in the directory /home/virtual/vivek.
+# This option also takes affect if local_root contains user_sub_token.
+user_sub_token=$USER
+
+# Usually this is mapped to Apache virtual hosting docroot, so that
+# Users can upload files
+local_root=/home/vftp/$USER
+
+# Chroot user and lock down to their home dirs
+chroot_local_user=YES
+
+# Hide ids from user
+hide_ids=YES
+
+#
+#chroot_local_user=YES
+#chroot_list_enable=NO
+#
+#pasv_min_port=40000
+#pasv_max_port=50000
+#
+#userlist_enable=YES
+#userlist_file=/etc/vsftpd.userlist
+#userlist_deny=NO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

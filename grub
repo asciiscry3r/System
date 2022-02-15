@@ -1,5 +1,4 @@
-GRUB_DEFAULT=0
-GRUB_TIMEOUT=5
-GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="quiet resume=UUID=36238c5a-d1ff-4e5f-986a-4d302098cfd7 loglevel=3 audit=0 lsm=landlock,lockdown,yama,apparmor,bpf l1tf=full,force mds=full,nosmt mitigations=auto,nosmt nosmt=force pcie_aspm=force init_on_alloc=1 init_on_free=1 randomize_kstack_offset=on slab_nomerge pti=on slub_debug=ZF slub_debug=P page_poison=1 mem_encrypt=on vsyscall=nonei nosmt"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet audit=0 lsm=landlock,lockdown,yama,apparmor,bpf l1tf=full,force mds=full,nosmt mitigations=auto,nosmt nosmt=force pcie_aspm=force init_on_alloc=1 init_on_free=1 randomize_kstack_offset=on slab_nomerge pti=on slub_debug=ZF slub_debug=P page_poison=1 mem_encrypt=on vsyscall=nonei amd_iommu=force_isolation amdgpu.vm_update_mode=0 amdgpu.gpu_recovery=1 amdgpu.fw_load_type=2 amdgpu.virtual_display=NULL amdgpu.audio=0 amdgpu.lbpw=1 amdgpu.tmz=1 amdgpu.freesync_video=1 fsck.mode=force fsck.repair=yes"
+# efi=disable_early_pci_dma
 GRUB_CMDLINE_LINUX=""
+

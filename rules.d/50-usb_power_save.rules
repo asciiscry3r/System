@@ -1,0 +1,4 @@
+ACTION=="add", SUBSYSTEM=="usb", TEST=="power/control", ATTR{power/control}="auto"
+
+# Wheel Mouse Optical
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1bcf", ATTR{idProduct}=="0005", TEST=="power/control", ATTR{power/control}="on"

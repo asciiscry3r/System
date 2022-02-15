@@ -57,7 +57,7 @@ bindsym $mod+Ctrl+t exec --no-startup-id picom --experimental-backends -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id teiler
 # bindsym $mod+Print exec --no-startup-id scrot
-bindsym $mod+Ctrl+k exec --no-startup-id xkill
+# bindsym $mod+Ctrl+k exec --no-startup-id xkill
 
 # focus_follows_mouse no
 
@@ -263,16 +263,14 @@ bindsym $mod+9 exec --no-startup-id blurlock
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id nitrogen --restore; sleep 1; picom --experimental-backends -b
 exec --no-startup-id nm-applet
-exec --no-startup-id opensnitch-ui
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id telegram-desktop
+exec --no-startup-id telegram-desktop --
 exec --no-startup-id unclutter
 exec --no-startup-id udev-notify
 exec --no-startup-id gxkb
 exec_always --no-startup-id autotiling
 # exec --no-startup-id xsuspender
 exec --no-startup-id python3 /opt/thefanclub/overgrive/overgrive
-# exec --no-startup-id hushboard
 exec_always --no-startup-id /home/max/.config/i3/autostart
 
 # background $term_background

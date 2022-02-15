@@ -88,7 +88,9 @@ else
 	fi
 fi
 
-unset use_color safe_term match_lhs sh
+export SYSTEMD_UNIT_PATH=$HOME/.config/systemd/user
+
+# unset use_color safe_term match_lhs sh
 
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
@@ -121,7 +123,7 @@ ex ()
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
+      *.rar)       unrar x $1   ;;
       *.gz)        gunzip $1    ;;
       *.tar)       tar xf $1    ;;
       *.tbz2)      tar xjf $1   ;;
@@ -139,11 +141,37 @@ ex ()
 # configure X
 xset -b
 xset r rate 400 60
-# xrandr --output eDP-1 --set TearFree on
 xhost -
 
+alias yay='paru'
+alias reinstallall='sudo pacman -Qqn | sudo pacman -S -'
+alias reinstallaur='sudo pacman -Qm | sort | sed -e 's/\([^.]*\).*/\1/' -e 's/\(.*\)-.*/\1/' | yay -S -'
+alias cleancache='sudo pacman -Scc'
+alias genpassword='pwgen -csny 20 1 | xclip -sel clip'
+alias aideupdate='sudo mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz && sudo aide --update > /home/max/GoogleDrive/LOGS/Aide/$(date +%H%M%d%Y).aide.log'
+alias runetherape='sudo etherape -i any > /home/max/GoogleDrive/LOGS/Net/networklog-$(date +%H%M%d%Y).log'
+alias fastscannetwork='nmap -T5'
+alias getdmesg='sudo dmesg > GoogleDrive/LOGS/Sys/dmesglog-$(date +%H%M%d%Y).log'
+alias runrkhunter='sudo rkhunter --skip-keypress --check --enable additional_rkts,apps,attributes,avail_modules,deleted_files,filesystem,group_accounts,group_changes,hashes,hidden_ports,hidden_procs,immutable,ipc_shared_mem,known_rkts,loaded_modules,local_host,login_backdoors,malware,network,os_specific,packet_cap_apps,passwd_changes,ports,possible_rkt_files,possible_rkt_strings,promisc,properties,rootkits,running_procs,scripts,shared_libs,shared_libs_path,sniffer_logs,startup_files,startup_malware,strings,susp_dirs,suspscan,system_commands,system_configs,system_configs_ssh,system_configs_syslog,tripwire,trojans --logfile /home/max/LOGS/Sec/rkhunter-$(date +%H%M%d%Y).log'
+
+# Git
+alias cleangit='git gc --prune=now --aggressive'
+# alias filterbranchtree='git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD'
+
+alias myway='echo -e "\nЦели не оправдывают средства, никогда.\nИногда не существенно какова природа действия но существенно зачем и что.\nНавязанные желания и илюзии преследуют любого\nМы биологические машины рожденные хаосом\n" | lolcat'
+
+## Copy and paste your key here with cat ~/.ssh/id_rsa.pub | xclip -sel clip .
+
 # Name
-echo -e "GRTD GNU/Linux\n"
+echo -e "GRTD GNU/Linux\n
+Enemies in your devices always kill you.
+FUCK OFF FUCKING CRACKERS, FUCKING SCIENTOLOGY MEMBERS, FUCKING PSYOPS. PIRATES AND PEOPLE PLEASE FUCK OFF TOO.
+FUCK OFF ALL FUCKING BICHES WHO SEE THIS EXCEPT SPECIAL SERVICES and SOME NICE PEOPLE.
+FUCK OFF SOME PART OFF UKRAINIAN ARMY/POLICE/COMMISSARIES!/SCIENTOLOGY!/AND ALL OTHER CRACKERS."
 
 # memes
 fortune | cowsay -f tux | lolcat
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION
